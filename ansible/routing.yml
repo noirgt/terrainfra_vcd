@@ -1,0 +1,26 @@
+---
+- name: Change parameters of routing
+  hosts: all
+  vars:
+    last_octet_addr: "253"
+    gateway: "{{ ansible_ssh_host.split('.')[0] }}.{{ 
+      ansible_ssh_host.split('.')[1] }}.{{ 
+        ansible_ssh_host.split('.')[2] }}.{{ 
+          last_octet_addr }}"
+  become: true
+  tasks:
+
+
+    - name: Explicitly specifying positional matched groups in replacement
+      ansible.builtin.replace:
+        path: /etc/netplan/99-netcfg-vmware.yaml
+        regexp: '^(.+gateway4:[ ]+)[^\n]+$'
+        replace: '\g<1>{{ gateway }}'
+      when: ansible_facts['lsb']['id'] == 'Ubuntu'
+      notify:
+        - apply netplan configuration
+
+  handlers:
+    - name: apply netplan configuration
+      become: true
+      shell: 'netplan apply'

@@ -1,0 +1,32 @@
+---
+- hosts: all
+  vars:
+    lvm_groups:
+      - vgname: "{{ item.vg }}"
+        disks: "{{ item.disks }}"
+        create: true
+        lvnames:
+          - lvname: "{{ item.lv }}"
+            size: "{{ item.size }}"
+            create: true
+            filesystem: ext4
+            mount: true
+            mntp: "{{ item.mnt }}"
+    manage_lvm: true
+    
+  tasks:
+    - shell: "pvdisplay -m | grep -Fc 'PV Name'"
+      register: num_pv
+      become: true
+
+    - name: Reboot the machine (Wait for 5 min)
+      reboot:
+        reboot_timeout: 300
+      become: true
+      when: num_disks | int - num_pv.stdout | int > 1
+
+    - name: Include lvm
+      include_role:
+        name: ansible-manage-lvm
+
+      with_items: "{{ lvm_list }}"
