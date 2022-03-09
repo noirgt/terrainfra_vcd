@@ -1,0 +1,14 @@
+# Example of YC
+terraform {
+  backend "s3" {
+    endpoint   = "<your_endpoint_address>"
+    bucket     = "<your_bucket_name>"
+    region     = "<your_yc_region>"
+    key        = "<your_local_path_to_key-file>"
+    access_key = "<your_access_key>
+    secret_key = "<your_secret_key>"
+
+    skip_region_validation      = true
+    skip_credentials_validation = true
+  }
+}

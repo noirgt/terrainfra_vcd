@@ -1,0 +1,11 @@
+# Provider's values
+vcd_user                 = "username"
+vcd_pass                 = "password"  
+vcd_org                  = "example"
+vcd_vdc                  = "example-DP-VDC"
+vcd_url                  = "https://iaas.cloud.mts.ru/api"
+vcd_max_retry_timeout    = 60
+vcd_allow_unverified_ssl = false
+ssh_user                 = "ssh_username"
+ssh_pass                 = "ssh_password"
+public_ssh_key_path      = "/home/myuser/.ssh/id_rsa.pub"
