@@ -26,16 +26,16 @@
 | [terraform.tfvars][PlG_VARS_TF] | Содержит значения системных переменных - от URL-адреса ДЦ до указания учётных данных для авторизации в VCD;  |
 | [storage-bucket.tf][PlG_BUCKET] | Содержит блок конфигурации для хранения удалённого state-файла в S3-хранилище.  |
 
-[PlG_DC]: <https://gitlab.innoseti.ru/devops/terraform-infra/-/blob/master/datacenters.tf>
-[PlG_OS]: <https://gitlab.innoseti.ru/devops/terraform-infra/-/blob/master/os.tf>
-[PlG_CATALOGS]: <https://gitlab.innoseti.ru/devops/terraform-infra/-/blob/master/catalogs.tf>
-[PlG_NETWORKS]: <https://gitlab.innoseti.ru/devops/terraform-infra/-/blob/master/catalogs.tf>
-[PlG_STORAGES]: <https://gitlab.innoseti.ru/devops/terraform-infra/-/blob/master/storages.tf>
-[PlG_DISKS]: <https://gitlab.innoseti.ru/devops/terraform-infra/-/blob/master/disks.tf>
-[PlG_VM_DP]: <https://gitlab.innoseti.ru/devops/terraform-infra/-/blob/master/VMs-DP.tf>
-[PlG_VM_AVNTG]: <https://gitlab.innoseti.ru/devops/terraform-infra/-/blob/master/VMs-AVNTG.tf>
-[PlG_VARS_TF]: <https://gitlab.innoseti.ru/devops/terraform-infra/-/blob/master/terraform.tfvars.example>
-[PlG_BUCKET]: <https://gitlab.innoseti.ru/devops/terraform-infra/-/blob/master/storage-bucket.tf.example>
+[PlG_DC]: <https://github.com/noirgt/terrainfra_vcd/blob/main/datacenters.tf>
+[PlG_OS]: <https://github.com/noirgt/terrainfra_vcd/blob/main/os.tf>
+[PlG_CATALOGS]: <https://github.com/noirgt/terrainfra_vcd/blob/main/catalogs.tf>
+[PlG_NETWORKS]: <https://github.com/noirgt/terrainfra_vcd/blob/main/catalogs.tf>
+[PlG_STORAGES]: <https://github.com/noirgt/terrainfra_vcd/blob/main/storages.tf>
+[PlG_DISKS]: <hhttps://github.com/noirgt/terrainfra_vcd/blob/main/disks.tf>
+[PlG_VM_DP]: <https://github.com/noirgt/terrainfra_vcd/blob/main/VMs-DP.tf>
+[PlG_VM_AVNTG]: <https://github.com/noirgt/terrainfra_vcd/blob/main/VMs-AVNTG.tf>
+[PlG_VARS_TF]: <https://github.com/noirgt/terrainfra_vcd/blob/main/terraform.tfvars.example>
+[PlG_BUCKET]: <https://github.com/noirgt/terrainfra_vcd/blob/main/storage-bucket.tf.example>
 
 * Неизменяемые:
 
@@ -44,8 +44,8 @@
 | [variables.tf][PlG_VARS] | Содержит набор необходимых переменных определяемых в конфигурации манифеста; |
 | [modules/*][PlG_MODULES] | Содержит набор модулей для создания и пост-конфигурации VM: _копирование ключей для SSH-авторизации_, _изменение дефолтного шлюза_, _создание LVM-разделов_. |
 
-[PlG_VARS]: <https://gitlab.innoseti.ru/devops/terraform-infra/-/blob/master/variables.tf>
-[PlG_MODULES]: <https://gitlab.innoseti.ru/devops/terraform-infra/-/blob/master/modules>
+[PlG_VARS]: <https://github.com/noirgt/terrainfra_vcd/blob/main/variables.tf>
+[PlG_MODULES]: <https://github.com/noirgt/terrainfra_vcd/blob/main/modules>
 
 > Под значением "алиас" подразумевается короткий ключ словаря для вызова длинного пути data-сущности в качестве его значения.
 
