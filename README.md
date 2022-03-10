@@ -32,7 +32,7 @@
 [PlG_NETWORKS]: <https://github.com/noirgt/terrainfra_vcd/blob/main/catalogs.tf>
 [PlG_STORAGES]: <https://github.com/noirgt/terrainfra_vcd/blob/main/storages.tf>
 [PlG_DISKS]: <https://github.com/noirgt/terrainfra_vcd/blob/main/disks.tf>
-[PlG_VM_DP]: <https://github.com/noirgt/terrainfra_vcd/blob/main/VMs-DP.tf>
+[PlG_VM_DP]: <https://github.com/noirgt/terrainfra_vcd/blob/main/VMs.tf>
 [PlG_VM_AVNTG]: <https://github.com/noirgt/terrainfra_vcd/blob/main/VMs-AVNTG.tf>
 [PlG_VARS_TF]: <https://github.com/noirgt/terrainfra_vcd/blob/main/terraform.tfvars.example>
 [PlG_BUCKET]: <https://github.com/noirgt/terrainfra_vcd/blob/main/storage-bucket.tf.example>
